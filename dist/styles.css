@@ -25,6 +25,20 @@ body {
   color: #0F3B8F ;
 }
 
+#hero-text a {
+  border-color: #3565C1;
+}
+
+#hero-text a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
  /* transparent texture not needed after all
  #hero-div::before {
   background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
