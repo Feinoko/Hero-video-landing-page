@@ -22,21 +22,31 @@ body {
 
 #hero-text span {
   font-size: 4.0625rem; /* 65px */
-  color: #0F3B8F ;
+  color: #0F3B8F;
 }
 
-#hero-text a {
+
+#cta {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-width: 2px;
+  border-style: solid;
   border-color: #3565C1;
+  position: relative;
+  color: #0F3B8F;
 }
 
-#hero-text a::before {
+#cta::before {
   content: '';
+  background-color: black;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 15%;
 }
 
  /* transparent texture not needed after all
