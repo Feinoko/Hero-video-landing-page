@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/tailwindFull.css">
+  <!-- this is the full compiled tailwind with autoprefixer through the postcss pipeline -- remove on distribution. -->
+  <link rel="stylesheet" href="./tailwind.css"> <!-- purged css, remove above tailwindFull file on distribution -->
+  <link rel="stylesheet" href="./styles.css"> <!-- for handmade classes/CSS styles -->
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="hero-div" class="h-screen w-full bg-red-400">
+    <video
+     src="../media/Bulkcargoclip-compressed.m4v"
+     autoplay
+     muted
+     preload
+     loop
+     class="absolute h-full w-full inset-0 object-cover"
+    >
+    your browser does not support videos
+    </video>
+  </div>
+
+  <script src="./app.js"></script>
+
+</body>
+
+</html>
