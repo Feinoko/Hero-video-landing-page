@@ -25,10 +25,11 @@ Organise structure beforehand
 
 Current-task 
 ==========
-Main :
+Main : insert the video bg
+-insert hero text & button
 ---
-Steps : 
-#1 : insert the video bg
+Steps for MVP (minimum viable product) : 
+#1 : insert the video bg OK
 #2 : insert hero text & button
 #3 : insert navbar with logo and links
 #4 : insert slanted polygons
