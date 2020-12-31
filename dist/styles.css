@@ -6,7 +6,7 @@ body {
 
 #hero-div::after {
   content: '';
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -16,13 +16,13 @@ body {
 }
 
 #hero-text {
-  color: #3565C1;
+  color: #dee6f5;
   font-size: 3.125rem; /* 50px */
 }
 
 #hero-text span {
   font-size: 4.0625rem; /* 65px */
-  color: #0F3B8F;
+  color: #d08c0f;
 }
 
 
@@ -33,9 +33,9 @@ body {
   padding: 0.5rem 1.5rem;
   border-width: 2px;
   border-style: solid;
-  border-color: #3565C1;
+  border-color:  #d08c0f;
   position: relative;
-  color: #0F3B8F;
+  color:  #d08c0f
 }
 
 #cta::before {
