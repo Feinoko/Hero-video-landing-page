@@ -1,5 +1,9 @@
 /* all complementary styles that do not use tailwind here (no need to preprocess them) */
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 #hero-div::after {
   content: '';
   background-color: rgba(0, 0, 0, 0.4);
@@ -11,8 +15,18 @@
   z-index: 15;
 }
 
-// transparent texture not needed after all
-/* #hero-div::before {
+#hero-text {
+  color: #3565C1;
+  font-size: 3.125rem; /* 50px */
+}
+
+#hero-text span {
+  font-size: 4.0625rem; /* 65px */
+  color: #0F3B8F ;
+}
+
+ /* transparent texture not needed after all
+ #hero-div::before {
   background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
   
   content: '';
@@ -22,4 +36,4 @@
   top: 0;
   left: 0;
   z-index: 20;
-} */
+}  */

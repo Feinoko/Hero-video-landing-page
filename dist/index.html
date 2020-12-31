@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../src/tailwindFull.css">
   <!-- this is the full compiled tailwind with autoprefixer through the postcss pipeline -- remove on distribution. -->
   <link rel="stylesheet" href="./tailwind.css"> <!-- purged css, remove above tailwindFull file on distribution -->
@@ -23,6 +25,12 @@
     >
     your browser does not support videos
     </video> -->
+    <div id="hero-text-parent" class="absolute h-full w-full bg-purple-300 z-20 flex items-center justify-center">
+      <div id="hero-text" class="text-blue-700">
+        <h1>A <span>Shipping</span> service...</h1>
+        <h1>Redesigned for the <span>Future</span></h1>
+      </div>
+    </div>
   </div>
 
   <script src="./app.js"></script>
