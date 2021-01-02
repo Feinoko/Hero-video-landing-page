@@ -10,12 +10,43 @@ header {
 }
 
 #slanted-header {
-  background-color: #ac7b1f;
+  background-color: #d08c0f;
   clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+#logo-img {
+  position: relative;
 }
 
 #flex-nav {
   color: #dee6f5;
+}
+
+.nav-items {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-items:hover {
+  color: rgba(31, 41, 55);
+}
+
+.nav-items::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  top: 100%;
+  left: 0;
+  background-color: rgba(31, 41, 55);
+  transition: transform 0.2s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.nav-items:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 #hero-div::after {
