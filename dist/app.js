@@ -14,7 +14,7 @@ class Settings {
 }
 
 // get elements
-const heroKeyWords = document.querySelectorAll('#hero-text span');
+const heroKeywords = document.querySelectorAll('#hero-text .hero-keywords');
 let anim; // placeholder animation
 
 // animations library
@@ -27,7 +27,7 @@ const fadeIn = [
 let fadeInSettings = new Settings(1500, 1, 0, 'forwards');
 
 // hero highlight text fade in
-heroKeyWords.forEach(function (text) {
+heroKeywords.forEach(function (text) {
   anim = text.animate(fadeIn, fadeInSettings);
   fadeInSettings.delay += 800;
 });
@@ -36,7 +36,10 @@ heroKeyWords.forEach(function (text) {
 // waiting for above anim to finish 1st:
 anim.finished.then(() => {
   // console.log('completed 1st anim');
-  const heroText = document.querySelector('#hero-text :not(span)');
-  heroText.remove();
+  const heroText = document.querySelectorAll('.hero-text__white');
+  heroText.forEach(function(text) {
+    fadeInSettings.delay = 0; // resetting the offset (all text must appear immediately after previous anim)
+    text.animate(fadeIn, fadeInSettings);
+  })
 
 })
