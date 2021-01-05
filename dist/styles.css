@@ -51,13 +51,18 @@ header {
 
 #hero-div::after {
   content: '';
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(0, 0, 0);
+  opacity: 0.4;
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 15;
+}
+
+video {
+  opacity: 0;
 }
 
 

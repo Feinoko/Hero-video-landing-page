@@ -15,7 +15,6 @@ class Settings {
 
 // globals
 let anim; // will progressively by assigned each anim step
-let anim2;
 // customize parameters here:
 const fadeInTime = 1500;
 const delay = 800;
@@ -47,14 +46,19 @@ anim.finished.then(() => {
     fadeInSettings.delay = 0; // resetting the offset (all text must appear immediately after previous anim)
     anim = text.animate(fadeIn, fadeInSettings); // re-assigning anim so that next animation awaits this one
   });
-  // nesting within the promise the next animation !! you have to nest the next then inside the previous then !!
+  // nesting within the promise the next animation. !!you have to nest the next then inside the previous then !!
   // cta btn fade in
   anim.finished.then(() => {
   console.log('animation2 finished');
   const ctaBtn = document.getElementById('cta');
-  anim = ctaBtn.animate(fadeIn, fadeInSettings);
+  ctaBtn.animate(fadeIn, fadeInSettings);
   });
+  // at the same time, bg vid fades in
+  anim.finished.then(() => {
+    const vid = document.querySelector('video');
+    anim = vid.animate(fadeIn, fadeInSettings);
+    
+  })
 });
 
-// cta btn fade in
 
