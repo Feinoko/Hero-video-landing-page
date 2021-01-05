@@ -5,18 +5,19 @@ ANIMATIONS
 // Classes definition
 
 class Settings {
-  constructor(duration, iterations, delay, fill) {
+  constructor(duration, iterations, delay, fill, easing) {
     this.duration = duration;
     this.iterations = iterations;
     this.delay = delay;
     this.fill = fill;
+    this.easing = easing;
   }
 }
 
 // globals
 let anim; // will progressively by assigned each anim step
 // customize parameters here:
-const fadeInTime = 1500;
+const fadeInTime = 1000;
 const delay = 800;
 
 // animations library
@@ -25,15 +26,21 @@ const fadeIn = [
   { opacity: 1 }
 ]
 
+const blurFadeIn = [
+  { opacity: 0, filter: 'blur(10px)'},
+  { opacity: 1, offset: 0.7},
+  { opacity: 1, filter: 'blur(0px)'}
+]
+
 // temporal settings
-let fadeInSettings = new Settings(fadeInTime, 1, 0, 'forwards');
+let fadeInSettings = new Settings(fadeInTime, 1, 0, 'forwards', 'ease-in');
 
 // hero key text fade in
 // get elements 
 const heroKeywords = document.querySelectorAll('#hero-text .hero-keywords');
 // launch anim on each element
 heroKeywords.forEach(function (text) {
-  anim = text.animate(fadeIn, fadeInSettings);
+  anim = text.animate(blurFadeIn, fadeInSettings);
   fadeInSettings.delay += delay;
 });
 
@@ -56,7 +63,8 @@ anim.finished.then(() => {
   // at the same time, bg vid fades in
   anim.finished.then(() => {
     const vid = document.querySelector('video');
-    anim = vid.animate(fadeIn, fadeInSettings);
+    fadeInSettings = new Settings(fadeInTime*2, 1, 0, 'forwards', 'ease-in');
+    anim = vid.animate(blurFadeIn, fadeInSettings);
     
   })
 });
