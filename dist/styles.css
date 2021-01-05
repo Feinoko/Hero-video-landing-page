@@ -69,7 +69,9 @@ header {
 #hero-text span {
   font-size: 4.0625rem; /* 65px */
   color: #d08c0f;
+  opacity: 0; /* for fade in anim */
 }
+
 
 
 #cta {

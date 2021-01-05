@@ -17,6 +17,7 @@ Current-task
 ==========
 -> create onload animation:
 -hero text appears fading in, blur to focus
+*fade in the span elements 1st, then after a delay, fade the white text in
 -video fades in
 -discover us appears
 -on click discover, nav overlay slides in (top+bottom)
@@ -46,7 +47,7 @@ secondary/optional:
 
 problems/bugs to fix:
 ------------------
-
+-Add responsiveness (nav menu gets crammed)
 
 Stashed tasks (put on backburner to keep focused on current task)
 ==========
