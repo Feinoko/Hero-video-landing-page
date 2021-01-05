@@ -1,4 +1,6 @@
-// ANIMATIONS
+/* ============
+ANIMATIONS 
+=============== */
 
 // Classes definition
 
@@ -12,7 +14,8 @@ class Settings {
 }
 
 // get elements
-const heroText = document.querySelectorAll('#hero-text span');
+const heroKeyWords = document.querySelectorAll('#hero-text span');
+let anim; // placeholder animation
 
 // animations library
 const fadeIn = [
@@ -23,29 +26,17 @@ const fadeIn = [
 // temporal settings
 let fadeInSettings = new Settings(1500, 1, 0, 'forwards');
 
-
-  //   duration: 1500,
-//   iterations: 1,
-//   delay: Math.random() * 500,
-//   fill: 'forwards'
-// }
-
-// function randomizeStartFadeInSettings() {
-//   fadeInSettings = {
-//     duration: 2000,
-//     iterations: 1,
-//     delay: Math.random() * 800,
-//     fill: 'forwards'
-//   }
-// }
-
-// // hero text fadein
-// const heroTextAnim = heroText.animate(fadeIn, fadeInSettings);
-
-
-heroText.forEach(function (text) {
-  // randomizeStartFadeInSettings();
-  text.animate(fadeIn, fadeInSettings);
+// hero highlight text fade in
+heroKeyWords.forEach(function (text) {
+  anim = text.animate(fadeIn, fadeInSettings);
   fadeInSettings.delay += 800;
 });
 
+// hero 'white' text fade in after above is complete
+// waiting for above anim to finish 1st:
+anim.finished.then(() => {
+  // console.log('completed 1st anim');
+  const heroText = document.querySelector('#hero-text :not(span)');
+  heroText.remove();
+
+})
