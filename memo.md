@@ -15,12 +15,17 @@ Organise structure beforehand
 
 Current-task 
 ==========
--> insert navbar with logo and links
+-> create onload animation:
+-hero text appears fading in, blur to focus
+-video fades in
+-discover us appears
+-on click discover, nav overlay slides in (top+bottom)
+
 ---
 Steps to complete:
-#1 : insert overlay + slant
-#2 : insert text + logo
-#3 : insert animation on clicking discover
+#1 : 
+#2 : 
+#3 : 
 ---
 
 Main steps for MVP (minimum viable product) :
