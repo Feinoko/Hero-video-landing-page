@@ -89,6 +89,7 @@ header {
   position: relative;
   color:  #d08c0f;
   transition: 0.2s;
+  opacity: 0; /* initial state. for fade in anim */
 }
 
 #cta:hover {

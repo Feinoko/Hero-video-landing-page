@@ -13,9 +13,12 @@ class Settings {
   }
 }
 
-// get elements
-const heroKeywords = document.querySelectorAll('#hero-text .hero-keywords');
-let anim; // placeholder animation
+// globals
+let anim; // will progressively by assigned each anim step
+let anim2;
+// customize parameters here:
+const fadeInTime = 1500;
+const delay = 800;
 
 // animations library
 const fadeIn = [
@@ -24,22 +27,34 @@ const fadeIn = [
 ]
 
 // temporal settings
-let fadeInSettings = new Settings(1500, 1, 0, 'forwards');
+let fadeInSettings = new Settings(fadeInTime, 1, 0, 'forwards');
 
-// hero highlight text fade in
+// hero key text fade in
+// get elements 
+const heroKeywords = document.querySelectorAll('#hero-text .hero-keywords');
+// launch anim on each element
 heroKeywords.forEach(function (text) {
   anim = text.animate(fadeIn, fadeInSettings);
-  fadeInSettings.delay += 800;
+  fadeInSettings.delay += delay;
 });
 
 // hero 'white' text fade in after above is complete
 // waiting for above anim to finish 1st:
 anim.finished.then(() => {
-  // console.log('completed 1st anim');
+  console.log('animation1 finished');
   const heroText = document.querySelectorAll('.hero-text__white');
-  heroText.forEach(function(text) {
+  heroText.forEach(function (text) {
     fadeInSettings.delay = 0; // resetting the offset (all text must appear immediately after previous anim)
-    text.animate(fadeIn, fadeInSettings);
-  })
+    anim = text.animate(fadeIn, fadeInSettings); // re-assigning anim so that next animation awaits this one
+  });
+  // nesting within the promise the next animation !! you have to nest the next then inside the previous then !!
+  // cta btn fade in
+  anim.finished.then(() => {
+  console.log('animation2 finished');
+  const ctaBtn = document.getElementById('cta');
+  anim = ctaBtn.animate(fadeIn, fadeInSettings);
+  });
+});
 
-})
+// cta btn fade in
+
