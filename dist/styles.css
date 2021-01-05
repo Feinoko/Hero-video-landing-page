@@ -66,10 +66,14 @@ header {
   font-size: 3.125rem; /* 50px */
 }
 
-#hero-text span {
+.hero-keywords {
   font-size: 4.0625rem; /* 65px */
   color: #d08c0f;
-  opacity: 0; /* for fade in anim */
+  opacity: 0; /* initial state. for fade in anim */
+}
+
+.hero-text__white {
+  opacity: 0; /* initial state. for fade in anim */
 }
 
 
