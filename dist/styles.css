@@ -45,6 +45,7 @@ header {
     width: 100%;
     font-size: .75rem;
   }
+}
 
 .nav-items {
   position: relative;
@@ -144,15 +145,4 @@ footer {
   overflow: hidden;
 }
 
- /* transparent texture not needed after all
- #hero-div::before {
-  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
-  
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 20;
-}  */
+ 

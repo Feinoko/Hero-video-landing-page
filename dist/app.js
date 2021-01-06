@@ -17,8 +17,8 @@ class Settings {
 // globals
 let anim; // will progressively by assigned each anim step
 // customize parameters here:
-const fadeInTime = 200; //1000
-const delay = 100; //800
+const fadeInTime = 1500; //1000
+const delay = 800; //800
 
 /* animations library */
 const fadeIn = [
