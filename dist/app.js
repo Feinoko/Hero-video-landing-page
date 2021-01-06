@@ -32,7 +32,13 @@ const blurFadeIn = [
   { opacity: 1, filter: 'blur(0px)'}
 ]
 
-// temporal settings
+const blurSepiaFadeIn = [
+  { opacity: 0, filter: 'blur(10px) sepia(150%)'},
+  { opacity: 1, offset: 0.7},
+  { opacity: 1, filter: 'blur(0px) sepia(0%)'}
+]
+
+// default temporal settings
 let fadeInSettings = new Settings(fadeInTime, 1, 0, 'forwards', 'ease-in');
 
 // hero key text fade in
@@ -64,7 +70,7 @@ anim.finished.then(() => {
   anim.finished.then(() => {
     const vid = document.querySelector('video');
     fadeInSettings = new Settings(fadeInTime*2, 1, 0, 'forwards', 'ease-in');
-    anim = vid.animate(blurFadeIn, fadeInSettings);
+    anim = vid.animate(blurSepiaFadeIn, fadeInSettings);
     
   })
 });
