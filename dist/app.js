@@ -17,8 +17,8 @@ class Settings {
 // globals
 let anim; // will progressively by assigned each anim step
 // customize parameters here:
-const fadeInTime = 1500; //1000
-const delay = 800; //800
+const fadeInTime = 200; //1000
+const delay = 100; //800
 
 /* animations library */
 const fadeIn = [
@@ -100,7 +100,7 @@ anim.finished.then(() => {
 const ctaBtn = document.getElementById('cta');
 ctaBtn.addEventListener('click', function(e) {
   // sliding in nav & footer
-  const slideInTime = new Settings(1500, 1, 0, 'forwards', 'ease-in-out');
+  const slideInTime = new Settings(700, 1, 0, 'forwards', 'ease-in-out');
   document.querySelector('header').animate(slideDown, slideInTime);
   document.querySelector('#slanted-header').animate(slideDown, slideInTime);
   document.querySelector('footer').animate(slideUp, slideInTime);

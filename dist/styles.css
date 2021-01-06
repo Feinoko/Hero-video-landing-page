@@ -23,7 +23,28 @@ header {
 
 #flex-nav {
   color: #dee6f5;
+  font-size: 1.5rem;
 }
+
+@media screen and (max-width: 1200px) {
+  #flex-nav {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #flex-nav {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 430px) {
+  #flex-nav {
+    width: 100%;
+    font-size: .75rem;
+  }
 
 .nav-items {
   position: relative;
