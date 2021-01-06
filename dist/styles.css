@@ -3,15 +3,18 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  overflow: hidden;
 }
 
 header {
   background-color: #d08c0f;
+  transform: translateY(-10rem);
 }
 
 #slanted-header {
   background-color: #d08c0f;
   clip-path: polygon(0 0, 0 100%, 100% 0);
+  transform: translateY(-10rem);
 }
 
 #logo-img {
@@ -116,6 +119,8 @@ video {
 footer {
   background-color: #d08c0f;
   clip-path: polygon(0 0, 0 100%, 100% 100%);
+  transform: translateY(4rem);
+  overflow: hidden;
 }
 
  /* transparent texture not needed after all

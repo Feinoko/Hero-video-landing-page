@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: {
-    enabled: true, // purge will be done when compiling
+    enabled: false, // purge will be done when compiling
     content: ['dist/**/*.html', 'dist/**/*.js'] // will scan this path files to see which classes have been used
   },
   presets: [],

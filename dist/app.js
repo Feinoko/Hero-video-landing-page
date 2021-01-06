@@ -17,25 +17,44 @@ class Settings {
 // globals
 let anim; // will progressively by assigned each anim step
 // customize parameters here:
-const fadeInTime = 1000;
-const delay = 800;
+const fadeInTime = 1500; //1000
+const delay = 800; //800
 
-// animations library
+/* animations library */
 const fadeIn = [
   { opacity: 0 },
   { opacity: 1 }
 ]
 
+// hero key words
 const blurFadeIn = [
   { opacity: 0, filter: 'blur(10px)'},
   { opacity: 1, offset: 0.7},
   { opacity: 1, filter: 'blur(0px)'}
 ]
 
+// video
 const blurSepiaFadeIn = [
   { opacity: 0, filter: 'blur(10px) sepia(150%)'},
   { opacity: 1, offset: 0.7},
   { opacity: 1, filter: 'blur(0px) sepia(0%)'}
+]
+
+// navbar
+const slideDown = [
+  { transform: 'translateY(-10rem)'},
+  { transform: 'translateY(0rem)'}
+]
+
+// footer
+const slideUp = [
+  { transform: 'translateY(4rem)'},
+  { transform: 'translateY(0rem)'}
+]
+
+const fadeOut = [
+  { opacity: 1 },
+  { opacity: 0 }
 ]
 
 // default temporal settings
@@ -75,4 +94,20 @@ anim.finished.then(() => {
   })
 });
 
+// EVENT HANDLER
+
+// clicking cta btn (sliding in navbar & bottom overlay)
+const ctaBtn = document.getElementById('cta');
+ctaBtn.addEventListener('click', function(e) {
+  // sliding in nav & footer
+  const slideInTime = new Settings(1500, 1, 0, 'forwards', 'ease-in-out');
+  document.querySelector('header').animate(slideDown, slideInTime);
+  document.querySelector('#slanted-header').animate(slideDown, slideInTime);
+  document.querySelector('footer').animate(slideUp, slideInTime);
+  // fading out cta btn
+  let anim2 = ctaBtn.animate(fadeOut, slideInTime);
+  anim2.finished.then(() => ctaBtn.style.visibility = 'hidden');
+  console.log(e.target);
+  e.preventDefault;
+})
 

@@ -15,7 +15,6 @@ Organise structure beforehand
 
 Current-task 
 ==========
--> add blur effect on key words
 -> on click discover, nav overlay slides in (top+bottom)
 
 ---
