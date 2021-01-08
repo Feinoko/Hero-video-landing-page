@@ -2,11 +2,11 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
   overflow: hidden;
 }
 
 header {
+  font-family: 'Oswald', 'Roboto', sans-serif;
   background-color: #d08c0f;
   transform: translateY(-10rem);
 }
@@ -23,7 +23,7 @@ header {
 
 #flex-nav {
   color: #dee6f5;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -49,6 +49,7 @@ header {
 
 .nav-items {
   position: relative;
+  will-change: ;
   transition: color 0.2s ease;
 }
 
@@ -94,6 +95,7 @@ video {
 #hero-text {
   color: #dee6f5;
   font-size: 3.125rem; /* 50px */
+  font-family: 'Oswald', 'Roboto', sans-serif;
 }
 
 .hero-keywords {
